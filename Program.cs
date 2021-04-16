@@ -10,6 +10,7 @@ namespace NumberGuessing
 
             Random r = new();
             int magicNumber = r.Next(1, 100);
+            int guessCount = 0;
             bool win = false;
 
             Console.WriteLine("* Welcome to the Guessing Game! *");
@@ -17,7 +18,6 @@ namespace NumberGuessing
 
             do
             {
-                
                 Console.WriteLine("Guess the number between 1 & 100:");
                 string s = Console.ReadLine();
 
@@ -33,12 +33,13 @@ namespace NumberGuessing
                     Console.WriteLine("=================================");
                     win = true;
                 }
-
+                
+                guessCount++;
                 Console.WriteLine();
 
             } while (win == false);
 
-            Console.WriteLine("Thanks for playing");
+            Console.WriteLine("Thanks for playing, total guesses: {0}", guessCount.ToString());
             Console.Write("Press any key to exit");
             Console.ReadKey(true);
         }
