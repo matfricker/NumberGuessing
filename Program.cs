@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace number_guessing
+namespace NumberGuessing
 {
     class Program
     {
@@ -8,7 +8,7 @@ namespace number_guessing
         {
             // guess the random number generated between 0 & 100
 
-            Random r = new Random();
+            Random r = new();
             int magicNumber = r.Next(1, 100);
             bool win = false;
 
